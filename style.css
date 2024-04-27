@@ -9,7 +9,7 @@
     height: 100vh;
 }
 
-.cell {
+.row {
     width: 15px;
     height: 15px;
     border: solid black;
