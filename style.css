@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.container {
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,9 +11,32 @@
     height: 100vh;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    max-height: 600px;
+    width: 600px;
+    height: 600px;
+}
+
 .cell {
-    width: 15px;
-    height: 15px;
+    height: 10px;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
     border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 600px;
+    max-height: 600px;
 }
 

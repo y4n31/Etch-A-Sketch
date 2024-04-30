@@ -18,4 +18,4 @@ function gridCreation(numOfCells) {
 
     
 }
-gridCreation(16);
+gridCreation(64);
