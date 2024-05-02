@@ -7,7 +7,7 @@ button.setAttribute('style', 'margin-bottom: 10px;')
 body.appendChild(button);
 
 button.addEventListener('click', () => {
-    gridCreation(0);
+    container.innerHTML = '';
     gridCreation(prompt('Choose number of blocks'));
 });
 
@@ -27,5 +27,5 @@ function gridCreation(numOfCells) {
         container.appendChild(column);
     }
 }
-//gridCreation(16);
+gridCreation(16);
 
