@@ -8,10 +8,16 @@ body.appendChild(button);
 
 button.addEventListener('click', () => {
     container.innerHTML = '';
-    gridCreation(prompt('Choose number of blocks'));
+    let numberOfDivs = prompt('Choose number of blocks that is lower than 100');
+    if(numberOfDivs > 100) {
+        do {
+            numberOfDivs = prompt('Enter number less than 101 to avoid glitches');
+        } while (numberOfDivs > 100);
+    };
+    createGrid(numberOfDivs);
 });
 
-function gridCreation(numOfCells) {
+function createGrid(numOfCells) {
     for(let i = 0; i < numOfCells; i++) {
         const column = document.createElement('div');
         column.classList.add('column');
@@ -27,5 +33,5 @@ function gridCreation(numOfCells) {
         container.appendChild(column);
     }
 }
-gridCreation(16);
+createGrid(16);
 
