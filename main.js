@@ -27,7 +27,9 @@ function createGrid(numOfCells) {
             column.appendChild(cell);
             
             cell.addEventListener('mouseover', function() {
-                cell.style.backgroundColor = 'red';
+                let randomNumber = Math.floor(Math.random() * 16777215);
+                let randomColor =  '#' + randomNumber.toString(16);
+                cell.style.backgroundColor = randomColor;
             });
         }
         container.appendChild(column);
