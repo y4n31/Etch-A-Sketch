@@ -26,11 +26,14 @@ function createGrid(numOfCells) {
             cell.classList.add('cell');
             column.appendChild(cell);
             
+            //cell changes its color randomly
             // cell.addEventListener('mouseover', function() {
             //     let randomNumber = Math.floor(Math.random() * 16777215);
             //     let randomColor =  '#' + randomNumber.toString(16);
             //     cell.style.backgroundColor = randomColor;
             // });
+
+            //cell changes its opacity with each interaction
             let i = 0.1;
             cell.addEventListener('mouseover', function() {
                 i = i + 0.1;
