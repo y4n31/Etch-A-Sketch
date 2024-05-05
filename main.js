@@ -26,10 +26,16 @@ function createGrid(numOfCells) {
             cell.classList.add('cell');
             column.appendChild(cell);
             
+            // cell.addEventListener('mouseover', function() {
+            //     let randomNumber = Math.floor(Math.random() * 16777215);
+            //     let randomColor =  '#' + randomNumber.toString(16);
+            //     cell.style.backgroundColor = randomColor;
+            // });
+            let i = 0.1;
             cell.addEventListener('mouseover', function() {
-                let randomNumber = Math.floor(Math.random() * 16777215);
-                let randomColor =  '#' + randomNumber.toString(16);
-                cell.style.backgroundColor = randomColor;
+                i = i + 0.1;
+                cell.style.backgroundColor = 'black';
+                cell.style.opacity = i;
             });
         }
         container.appendChild(column);
